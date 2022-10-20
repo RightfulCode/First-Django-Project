@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete{% endblock %}
+{% block content %}
+<h1>Delete Employee</h1>
+<div class="dropdown">
+  <button class="dropbtn">Employees
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    {% for i in objects %}
+    <a href="{% url 'Deleted' i.id %}">{{i.first_name}} {{i.last_name}}</a>
+    {% endfor %}
+  </div>
+</div> 
+<a href="{% url 'Home' %}"><button class="home">Home</button></a>
+{% endblock %}

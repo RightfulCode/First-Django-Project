@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Office Management System!</h1>
+    <a href="{% url 'Add' %}"><button>Create</button></a>
+    <a href="{% url 'Read' %}"><button>Read</button></a>
+    <a href="{% url 'Update' %}"><button>Update</button></a>
+    <a href="{% url 'Delete' %}"><button>Delete</button></a>
+{% endblock %}

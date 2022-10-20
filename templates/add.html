@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Create{% endblock %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for i in object %}
+    {{i.label_tag}} {{i}} <br> <br>
+    {% endfor %}
+    <button type="submit" value="submit">Submit</button>
+</form>
+{% endblock %}
